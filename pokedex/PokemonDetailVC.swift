@@ -10,6 +10,17 @@ import UIKit
 
 class PokemonDetailVC: UIViewController {
 
+    /*
+    
+    Back Arrow : Left Arrow free icon
+                 by Freepik in Arrows.
+                 Pack: iOS7 Set Lined 1
+                 flaticon.com   
+    
+     */
+    
+    
+    
     var pokemon: Pokemon!
     
     @IBOutlet weak var nameLbl: UILabel!
