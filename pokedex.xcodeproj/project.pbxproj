@@ -18,6 +18,7 @@
 		1EB3A9071C431C44004E34CA /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB3A9061C431C44004E34CA /* csv.swift */; };
 		1EB3A90C1C432297004E34CA /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EB3A90B1C432297004E34CA /* Pokemon Solid.ttf */; };
 		1EB3A90E1C4325BE004E34CA /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1EB3A90D1C4325BE004E34CA /* music.mp3 */; };
+		1EB3A9101C43A41C004E34CA /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB3A90F1C43A41C004E34CA /* PokemonDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1EB3A9061C431C44004E34CA /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		1EB3A90B1C432297004E34CA /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		1EB3A90D1C4325BE004E34CA /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		1EB3A90F1C43A41C004E34CA /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				1EB3A8EE1C42F869004E34CA /* ViewController.swift */,
+				1EB3A90F1C43A41C004E34CA /* PokemonDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				1EB3A9051C430712004E34CA /* PokeCell.swift in Sources */,
 				1EB3A8EF1C42F869004E34CA /* ViewController.swift in Sources */,
 				1EB3A8ED1C42F869004E34CA /* AppDelegate.swift in Sources */,
+				1EB3A9101C43A41C004E34CA /* PokemonDetailVC.swift in Sources */,
 				1EB3A9021C42FBA4004E34CA /* Pokemon.swift in Sources */,
 				1EB3A9071C431C44004E34CA /* csv.swift in Sources */,
 			);
