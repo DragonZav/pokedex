@@ -175,6 +175,9 @@
                                             <constraint firstAttribute="width" constant="37" id="krY-dg-bt0"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="J3B-UL-muB" eventType="touchUpInside" id="zC8-gF-9IH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -318,14 +321,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Ed-TD-Yzm">
                                 <rect key="frame" x="20" y="492" width="560" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="158" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-4C-cRy">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="158" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-4C-cRy">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="9KX-Pc-U0o"/>
                                             <constraint firstAttribute="width" constant="100" id="Dtl-fa-pj3"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="237" translatesAutoresizingMaskIntoConstraints="NO" id="SfZ-WM-X9E">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="237" translatesAutoresizingMaskIntoConstraints="NO" id="SfZ-WM-X9E">
                                         <rect key="frame" x="280" y="0.0" width="280" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="O6l-0I-JN4"/>
@@ -373,7 +376,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="baseAttackLbl" destination="UyN-7C-dCP" id="EKd-Xo-N3e"/>
+                        <outlet property="currentEvoImg" destination="Af0-4C-cRy" id="RHT-u1-LKZ"/>
+                        <outlet property="defenseLbl" destination="i7t-k6-AFN" id="iAd-M0-B7M"/>
+                        <outlet property="descriptionLbl" destination="6cX-ny-ufJ" id="6P2-7I-lhn"/>
+                        <outlet property="heightLbl" destination="vrv-T9-AVG" id="fbU-sE-KP2"/>
+                        <outlet property="mainImg" destination="G98-lH-0n7" id="26u-BM-3N7"/>
                         <outlet property="nameLbl" destination="eG2-TT-tcA" id="BVV-wb-MA1"/>
+                        <outlet property="nextEvoImg" destination="SfZ-WM-X9E" id="d6P-yI-dxq"/>
+                        <outlet property="pokedexLbl" destination="8gB-M0-wyU" id="PgW-YT-Dz3"/>
+                        <outlet property="typeLbl" destination="BNI-O2-6Ct" id="wWW-KZ-ciF"/>
+                        <outlet property="weightLbl" destination="5FC-Ll-LRX" id="HA4-Uo-hDY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYt-Ub-5sy" userLabel="First Responder" sceneMemberID="firstResponder"/>
