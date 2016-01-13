@@ -52,7 +52,7 @@ class PokemonDetailVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         tableView.delegate = self
         tableView.dataSource = self
         
-        nameLbl.text = pokemon.name
+        nameLbl.text = pokemon.name.capitalizedString
         let img = UIImage(named: "\(pokemon.pokedexId)")
         mainImg.image = img
         currentEvoImg.image = img

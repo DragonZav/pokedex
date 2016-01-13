@@ -13,7 +13,7 @@ class RoundLabel: UILabel {
     override func awakeFromNib() {
         layer.cornerRadius = 5.0
         layer.masksToBounds = true
-        backgroundColor = UIColor(red: 255.0/255.0, green: 88.0/255.0, blue: 85/255.0, alpha: 0.9)
+        backgroundColor = UIColor(red: 171.0/255.0, green: 76.0/255.0, blue: 255/255.0, alpha: 0.9)
         
     }
 
