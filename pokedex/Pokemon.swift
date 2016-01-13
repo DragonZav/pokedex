@@ -22,7 +22,15 @@ class Pokemon {
     private var _nextEvolutionId: String!
     private var _nextEvolutionLvl: String!
     private var _pokemonUrl: String!
+    private var _moves: [Move]!
     
+    // I question the encapsulation here.
+    var moves: [Move] {
+        if _moves == nil {
+            _moves = [Move]()
+        }
+        return _moves
+    }
     
     var name: String {
         return _name
@@ -117,8 +125,7 @@ class Pokemon {
         
        let url = NSURL(string: _pokemonUrl)!
         
-       print(url)
-        
+              
         Alamofire.request(.GET, url).responseJSON { response in
         
             let result = response.result
@@ -204,7 +211,60 @@ class Pokemon {
                             }
                         }
                     }
+                 }
+                
+                if let pokeMoves = dict["moves"] as? [Dictionary<String, AnyObject>] where pokeMoves.count > 0 {
+                    
+                    var theType = ""
+                    var theName = ""
+                    var theAcc = ""
+                    var thePower = ""
+                    var theDesc = ""
+                    
+                    
+                    for move in pokeMoves {
+                        
+                        if let url = move["resource_uri"] as? String {
+                            let nsurl = NSURL(string: "\(URL_BASE)\(url)")!
+                            
+                             Alamofire.request(.GET, nsurl).responseJSON { response in
+                                let moveResult = response.result
+                                if let moveDict = moveResult.value as? Dictionary<String, AnyObject> {
+                                    
+                                    if let pokeType = move["learn_type"] as? String {
+                                        theType = pokeType
+                                    }
+                                    
+                                    if let pokeName = move["name"] as? String {
+                                        theName = pokeName
+                                    }
+                                    
+                                    if let pokeAcc = moveDict["accuracy"] as? Int {
+                                        theAcc = "\(pokeAcc)"
+                                    }
+                                    
+                                    if let pokePower = moveDict["power"] as? Int {
+                                        thePower = "\(pokePower)"
+                                    }
+                                    
+                                    if let pokeDesc = moveDict["description"] as? String {
+                                        theDesc = pokeDesc
+                                    }
+                                    
+                                    
+                                    let move = Move(type: theType, name: theName, accuracy: theAcc,
+                                        power: thePower, description: theDesc)
+                                    
+                                                                        
+                                    self._moves.append(move)
+                                }
+                            }
+                        }
+                    }
                 }
+                
+                
+                
             }
         }
     }
